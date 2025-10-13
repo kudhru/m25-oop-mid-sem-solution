@@ -85,7 +85,10 @@ public class RoomsService {
      * If the capacities are equal, the comparison is done by room number (lexicographical order).
      * Make sure to handle null objects.
      * Expected Time for completion: 5 minutes
-     * [6 marks]
+     * [Total 6 marks]
+     * 2 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+     * 2 marks for correct comparison when the rooms have different capacities [Test Case 1.1]
+     * 2 marks for correct comparison when the rooms have same capacities but different room numbers [Test Case 1.2]
      */
     public int compareTo(Room other) {
       if (other == null) return 1;
@@ -99,7 +102,12 @@ public class RoomsService {
      * The rooms are equal if they have the same building and room number.
      * Make sure to handle null objects and objects of other types.
      * Expected Time for completion: 5 minutes
-     * [6 marks]
+     * [Total 6 marks]
+     * 2 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+     * 1 marks for correct comparison when both objects have same building but different room number [Test Case 2.1]
+     * 1 marks for correct comparison when both objects have different building but same room number [Test Case 2.2]
+     * 1 marks for correct comparison when both objects have different building and different room number [Test Case 2.3]
+     * 1 mark for correct comparison when both objects have same building and same room number [Test Case 2.4]
      */
     public boolean equals(Object o) {
       if (this == o) return true;
@@ -133,7 +141,10 @@ public class RoomsService {
        * Strictly, use a lambda expression.
        * Make sure to handle null objects.
        * Expected Time for completion: 5 minutes
-       * [6 marks]
+       * [Total 6 marks]
+       * 2 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+       * 2 marks for correct comparison when the rooms have different building [Test Case 3.1]
+       * 2 marks for correct comparison when the rooms have same building but different room number [Test Case 3.2]
        */
       public static final java.util.Comparator<Room> BY_BUILDING_THEN_ROOM = (a, b) -> {
         if (a == b) return 0;
@@ -177,7 +188,14 @@ public class RoomsService {
    * If the room already exists, return ErrorCode.DUPLICATE_ROOM.
    * If all validations pass, add the room to the list of rooms, initialize its bookingsByRoomKey entry, and return ErrorCode.OK;
    * Expected Time for completion: 10 minutes
-   * [10 marks]
+   * [Total 10 marks]
+   * 3 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+   * 1 marks for correct validation of room number [Test Case 4.1]
+   * 1 marks for correct validation of capacity [Test Case 4.2]
+   * 1.5 marks for correct handling of duplicate room [Test Case 4.3]
+   * 1 marks for correct addition of room to the list of rooms [Test Case 4.4]
+   * 1.5 marks for correct initialization of bookingsByRoomKey entry [Test Case 4.5]
+   * 1 mark for correct return of ErrorCode.OK [Test Case 4.6]
    */
   public ErrorCode addRoom(Room room) {
     if (room == null) {
@@ -209,7 +227,12 @@ public class RoomsService {
    * If the room is not found, return ErrorCode.ROOM_NOT_FOUND.
    * Use the getRoomKey method (already implemented) to get the key for the room.
    * Expected Time for completion: 7 minutes
-   * [8 marks]
+   * [Total 8 marks]
+   * 2 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+   * 2 marks for correct removal of room from the list of rooms [Test Case 5.1]
+   * 2 marks for correct removal of bookingsByRoomKey entry [Test Case 5.2]
+   * 1 mark for correct return of ErrorCode.OK [Test Case 5.3]
+   * 1 mark for correct return of ErrorCode.ROOM_NOT_FOUND [Test Case 5.4]
    */
   public ErrorCode removeRoom(Building building, String roomNumber) {
     for (int i = 0; i < rooms.size(); i++) {
@@ -228,7 +251,10 @@ public class RoomsService {
    * If the room is found (matching the given building and room number), returns the room.
    * If the room is not found, returns null.
    * Expected Time for completion: 5 minutes
-   * [5 marks]
+   * [Total 5 marks]
+   * 1.5 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+   * 2 marks for correct return of room [Test Case 6.1]
+   * 1.5 mark for correct return of null [Test Case 6.2]
    */
   public Room getRoom(Building building, String roomNumber) {
     for (Room r : rooms) {
@@ -249,7 +275,12 @@ public class RoomsService {
    * - Internet is available in the room (if internetRequired is true)
    * Rest of the implementation is already provided.
    * Expected Time for completion: 7 minutes
-   * [8 marks]
+   * [Total 8 marks]
+   * 2 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+   * 1 marks for correct filter of rooms based on capacity [Test Case 7.1]
+   * 1 marks for correct filter of rooms based on building [Test Case 7.2]
+   * 2 marks for correct filter of rooms based on projector [Test Case 7.3]
+   * 2 marks for correct filter of rooms based on internet [Test Case 7.4]
    */
   public List<Room> filterRooms(Integer minCapacity, Building building, Boolean projectorRequired, Boolean internetRequired) {
     RoomPredicate predicate = r ->
@@ -275,7 +306,16 @@ public class RoomsService {
    * If the hour is already booked, return ErrorCode.ALREADY_BOOKED.
    * Else, update the bookingsByRoomKey entry for the room and return ErrorCode.OK;
    * Expected Time for completion: 10 minutes
-   * [10 marks]
+   * [Total 10 marks]
+   * 3 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+   * 0.5 marks for correct validation of hour [Test Case 8.1]
+   * 0.5 marks for correct validation of room [Test Case 8.2]
+   * 0.5 marks for correct validation of capacity [Test Case 8.3]
+   * 0.5 marks for correct validation of projector [Test Case 8.4]
+   * 0.5 marks for correct validation of internet [Test Case 8.5]
+   * 0.5 marks for correct return of ErrorCode.ALREADY_BOOKED [Test Case 8.6]
+   * 3 mark for correct addition of hour to bookingsByRoomKey entry [Test Case 8.7]
+   * 1 mark for correct return of ErrorCode.OK [Test Case 8.8]
    */
   public ErrorCode bookRoom(Building building, String roomNumber, int hour, int minRequiredCapacity, boolean requireProjector, boolean requireInternet) {
     if (hour < 1 || hour > 10) {
@@ -316,7 +356,12 @@ public class RoomsService {
    * If the hour is currently unbooked, return ErrorCode.OK.
    * If the hour is currently booked, return ErrorCode.ALREADY_BOOKED.
    * Expected Time for completion: 7 minutes
-   * [8 marks]
+   * [Total 8 marks]
+   * 2 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+   * 1 marks for correct validation of hour [Test Case 9.1]
+   * 1 marks for correct validation of room [Test Case 9.2]
+   * 2 marks for correct return of ErrorCode.OK if the room is not booked [Test Case 9.3]
+   * 2 marks for correct return of ErrorCode.ALREADY_BOOKED if the room is booked [Test Case 9.4]
    */
   public ErrorCode isAvailable(Building building, String roomNumber, int hour) {
     if (hour < 1 || hour > 10) return ErrorCode.INVALID_HOUR;
@@ -335,7 +380,11 @@ public class RoomsService {
    * then for each room in the filtered list, check if it is available at the given hour using the isAvailable method.
    * Return the list of rooms that are available at the given hour.
    * Expected Time for completion: 7 minutes
-   * [8 marks]
+   * [Total 8 marks]
+   * 2 marks for successful compilation of this method (awarded only if the method is correctly implemented - logically)
+   * 1 marks for correct return of empty list if the hour is invalid [Test Case 10.1]
+   * 2 marks for correct filtering of rooms based on the given filters [Test Case 10.2]
+   * 3 marks for correct return of available rooms [Test Case 10.3]
    */
   public List<Room> getAvailableRoomsByHour(Building building, int hour, Integer minCapacity, Boolean projectorRequired, Boolean internetRequired) {
     if (hour < 1 || hour > 10) return new ArrayList<>();
