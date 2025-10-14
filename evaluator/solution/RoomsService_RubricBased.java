@@ -562,19 +562,20 @@ public class RoomsService {
     System.out.println();
     
     // Test Case 8.6: Already booked
-    System.out.println("TEST_CASE:8.6");
     service.bookRoom(Building.LTC, "5101", 2, 80, true, true);
     System.out.println("Input: Book already booked hour");
     System.out.println("Expected: ALREADY_BOOKED");
-    System.out.println("Actual: " + service.bookRoom(Building.LTC, "5101", 2, 80, true, true));
-    System.out.println("Result: " + (service.bookRoom(Building.LTC, "5101", 2, 80, true, true) == ErrorCode.ALREADY_BOOKED ? "PASS" : "FAIL"));
+    ErrorCode result8_6 = service.bookRoom(Building.LTC, "5101", 2, 80, true, true);
+    System.out.println("Actual: " + result8_6);
+    System.out.println("Result: " + (result8_6 == ErrorCode.ALREADY_BOOKED ? "PASS" : "FAIL"));
     System.out.println();
     
     // Test Case 8.7: Add to bookingsByRoomKey
     System.out.println("TEST_CASE:8.7");
     System.out.println("Input: Book hour 3");
     System.out.println("Expected: OK, hour added to bookingsByRoomKey");
-    System.out.println("Actual: " + service.bookRoom(Building.LTC, "5101", 3, 80, true, true));
+    ErrorCode result8_7 = service.bookRoom(Building.LTC, "5101", 3, 80, true, true);
+    System.out.println("Actual: " + result8_7);
     System.out.println("Result: " + (service.isAvailable(Building.LTC, "5101", 3) == ErrorCode.ALREADY_BOOKED ? "PASS" : "FAIL"));
     System.out.println();
     
@@ -582,8 +583,9 @@ public class RoomsService {
     System.out.println("TEST_CASE:8.8");
     System.out.println("Input: Book hour 4");
     System.out.println("Expected: OK");
-    System.out.println("Actual: " + service.bookRoom(Building.LTC, "5101", 4, 80, true, true));
-    System.out.println("Result: " + (service.bookRoom(Building.LTC, "5101", 4, 80, true, true) == ErrorCode.OK ? "PASS" : "FAIL"));
+    ErrorCode result8_8 = service.bookRoom(Building.LTC, "5101", 4, 80, true, true);
+    System.out.println("Actual: " + result8_8);
+    System.out.println("Result: " + (result8_8 == ErrorCode.OK ? "PASS" : "FAIL"));
     System.out.println();
 
     // TASK 9: isAvailable
@@ -609,16 +611,18 @@ public class RoomsService {
     System.out.println("TEST_CASE:9.3");
     System.out.println("Input: Check hour 5 (not booked)");
     System.out.println("Expected: OK");
-    System.out.println("Actual: " + service.isAvailable(Building.LTC, "5101", 5));
-    System.out.println("Result: " + (service.isAvailable(Building.LTC, "5101", 5) == ErrorCode.OK ? "PASS" : "FAIL"));
+    ErrorCode result9_3 = service.isAvailable(Building.LTC, "5101", 5);
+    System.out.println("Actual: " + result9_3);
+    System.out.println("Result: " + (result9_3 == ErrorCode.OK ? "PASS" : "FAIL"));
     System.out.println();
     
     // Test Case 9.4: Room booked
     System.out.println("TEST_CASE:9.4");
     System.out.println("Input: Check hour 2 (booked)");
     System.out.println("Expected: ALREADY_BOOKED");
-    System.out.println("Actual: " + service.isAvailable(Building.LTC, "5101", 2));
-    System.out.println("Result: " + (service.isAvailable(Building.LTC, "5101", 2) == ErrorCode.ALREADY_BOOKED ? "PASS" : "FAIL"));
+    ErrorCode result9_4 = service.isAvailable(Building.LTC, "5101", 2);
+    System.out.println("Actual: " + result9_4);
+    System.out.println("Result: " + (result9_4 == ErrorCode.ALREADY_BOOKED ? "PASS" : "FAIL"));
     System.out.println();
 
     // TASK 10: getAvailableRoomsByHour
