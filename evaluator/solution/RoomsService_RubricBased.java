@@ -414,8 +414,9 @@ public class RoomsService {
     System.out.println("TEST_CASE:4.6");
     System.out.println("Input: Add FD2-2101");
     System.out.println("Expected: OK");
-    System.out.println("Actual: " + service.addRoom(new Room(Building.FD2, "2101", 250, true, true)));
-    System.out.println("Result: " + (service.addRoom(new Room(Building.FD2, "2101", 250, true, true)) == ErrorCode.OK ? "PASS" : "FAIL"));
+    ErrorCode result4_6 = service.addRoom(new Room(Building.FD2, "2101", 250, true, true));
+    System.out.println("Actual: " + result4_6);
+    System.out.println("Result: " + (result4_6 == ErrorCode.OK ? "PASS" : "FAIL"));
     System.out.println();
 
     // TASK 5: removeRoom
@@ -443,8 +444,9 @@ public class RoomsService {
     System.out.println("TEST_CASE:5.3");
     System.out.println("Input: Remove NAB-6101");
     System.out.println("Expected: OK");
-    System.out.println("Actual: " + service.removeRoom(Building.NAB, "6101"));
-    System.out.println("Result: " + (service.removeRoom(Building.NAB, "6101") == ErrorCode.OK ? "PASS" : "FAIL"));
+    ErrorCode result5_3 = service.removeRoom(Building.NAB, "6101");
+    System.out.println("Actual: " + result5_3);
+    System.out.println("Result: " + (result5_3 == ErrorCode.OK ? "PASS" : "FAIL"));
     System.out.println();
     
     // Test Case 5.4: Return ROOM_NOT_FOUND
@@ -562,6 +564,7 @@ public class RoomsService {
     System.out.println();
     
     // Test Case 8.6: Already booked
+    System.out.println("TEST_CASE:8.6");
     service.bookRoom(Building.LTC, "5101", 2, 80, true, true);
     System.out.println("Input: Book already booked hour");
     System.out.println("Expected: ALREADY_BOOKED");
