@@ -10,6 +10,7 @@ An automated evaluation system for Java programming assignments with detailed ru
 - [Directory Structure](#directory-structure)
 - [Usage](#usage)
 - [Program Flow](#program-flow)
+- [Marks Change Comparison](#marks-change-comparison)
 - [Evaluation Report Structure](#evaluation-report-structure)
 - [Rubric Details](#rubric-details)
 - [Troubleshooting](#troubleshooting)
@@ -233,6 +234,43 @@ For each task (1 to 10):
 │  - Average marks                    │
 └─────────────────────────────────────┘
 ```
+
+## Marks Change Comparison
+
+### Comparing Marks Between Two Evaluation Runs
+
+The `script_difference_json.py` script allows you to compare marks awarded to students between two different evaluation runs (e.g., after rubric changes or code fixes). It generates a CSV report showing which students and tasks had marks changed.
+
+#### How It Works
+- Compares `evaluation_report.json` files in two directories (old and new).
+- Reports all tasks where marks have changed for each student.
+- Outputs a CSV file (`marks_changed_report.csv`) listing student name, ID, task number, old marks, and new marks.
+
+#### Usage
+
+1. Prepare two directories containing evaluation reports:
+   - `input_old/` (previous run)
+   - `input_new/` (current run)
+   - Each should have subfolders for each student, each containing an `evaluation_report.json`.
+
+2. Run the script:
+
+```bash
+python3 script_difference_json.py
+```
+
+3. The script will generate `marks_changed_report.csv` in the current directory.
+
+#### Example Output
+
+| Student Name | ID Number | Task Number | Old Marks | New Marks |
+|--------------|-----------|-------------|-----------|-----------|
+| John Doe     | 2023A7PS1234P | 3 | 0.0 | 6.0 |
+| Jane Smith   | 2023A7PS5678P | 5 | 8.0 | 10.0 |
+
+#### Notes
+- If a student is present in only one directory, the script will report new marks as changed from 0.0.
+- If no changes are detected, the script will print a message and not generate a CSV.
 
 ## Evaluation Report Structure
 
