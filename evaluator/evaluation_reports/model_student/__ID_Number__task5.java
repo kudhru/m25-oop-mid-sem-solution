@@ -156,7 +156,7 @@ public class RoomsService {
   }
 
   public ErrorCode removeRoom(Building building, String roomNumber) {
-    for (int i = 0; i < rooms.size(); i++) {
+for (int i = 0; i < rooms.size(); i++) {
       Room r = rooms.get(i);
       if (r.getBuilding() == building && r.getRoomNumber().equals(roomNumber)) {
         rooms.remove(i);

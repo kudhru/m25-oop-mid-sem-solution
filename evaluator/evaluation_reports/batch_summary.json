@@ -1,0 +1,17 @@
+{
+  "total_students": 1,
+  "students": {
+    "model_student": {
+      "name": "* ID Number:",
+      "id_number": "* Lab Number:",
+      "total_marks": 75.0,
+      "max_marks": 75.0,
+      "percentage": 100.0
+    }
+  },
+  "overall_stats": {
+    "total_marks": 75.0,
+    "max_marks": 75.0,
+    "average_percentage": 100.0
+  }
+}

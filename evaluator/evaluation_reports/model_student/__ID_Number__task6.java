@@ -168,7 +168,7 @@ public class RoomsService {
   }
 
   public Room getRoom(Building building, String roomNumber) {
-    for (Room r : rooms) {
+for (Room r : rooms) {
       if (r.getBuilding() == building && r.getRoomNumber().equals(roomNumber)) {
         return r;
       }

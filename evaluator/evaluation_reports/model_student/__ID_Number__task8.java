@@ -191,7 +191,7 @@ public class RoomsService {
   }
 
   public ErrorCode bookRoom(Building building, String roomNumber, int hour, int minRequiredCapacity, boolean requireProjector, boolean requireInternet) {
-    if (hour < 1 || hour > 10) {
+if (hour < 1 || hour > 10) {
       return ErrorCode.INVALID_HOUR;
     }
     Room room = getRoom(building, roomNumber);
@@ -213,6 +213,8 @@ public class RoomsService {
       booked = new HashSet<>();
       bookingsByRoomKey.put(k, booked);
     }
+    // Alternative solution for fetching the booked set:
+    // Set<Integer> booked = bookingsByRoomKey.computeIfAbsent(k, kk -> new HashSet<>());
     if (booked.contains(hour)) {
       return ErrorCode.ALREADY_BOOKED;
     }
