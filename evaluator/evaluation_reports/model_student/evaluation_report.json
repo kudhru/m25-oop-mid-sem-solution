@@ -1,0 +1,338 @@
+{
+  "student_info": {
+    "name": "* ID Number:",
+    "id_number": "* Lab Number:",
+    "lab_number": "* System Number:",
+    "system_number": "*/"
+  },
+  "total_marks": 75.0,
+  "max_marks": 75.0,
+  "percentage": 100.0,
+  "tasks": {
+    "task_1": {
+      "question_number": 1,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "1.1": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "1.2": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        }
+      },
+      "compilation_marks_awarded": 2,
+      "maximum_compilation_marks": 2,
+      "total_marks_awarded": 6,
+      "total_maximum_marks": 6
+    },
+    "task_2": {
+      "question_number": 2,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "2.1": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "2.2": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "2.3": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "2.4": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        }
+      },
+      "compilation_marks_awarded": 2,
+      "maximum_compilation_marks": 2,
+      "total_marks_awarded": 6,
+      "total_maximum_marks": 6
+    },
+    "task_3": {
+      "question_number": 3,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "3.1": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "3.2": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        }
+      },
+      "compilation_marks_awarded": 2,
+      "maximum_compilation_marks": 2,
+      "total_marks_awarded": 6,
+      "total_maximum_marks": 6
+    },
+    "task_4": {
+      "question_number": 4,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "4.1": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "4.2": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "4.3": {
+          "passed": true,
+          "marks_awarded": 1.5,
+          "maximum_marks": 1.5
+        },
+        "4.4": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "4.5": {
+          "passed": true,
+          "marks_awarded": 1.5,
+          "maximum_marks": 1.5
+        },
+        "4.6": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        }
+      },
+      "compilation_marks_awarded": 3,
+      "maximum_compilation_marks": 3,
+      "total_marks_awarded": 10.0,
+      "total_maximum_marks": 10.0
+    },
+    "task_5": {
+      "question_number": 5,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "5.1": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "5.2": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "5.3": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "5.4": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        }
+      },
+      "compilation_marks_awarded": 2,
+      "maximum_compilation_marks": 2,
+      "total_marks_awarded": 8,
+      "total_maximum_marks": 8
+    },
+    "task_6": {
+      "question_number": 6,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "6.1": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "6.2": {
+          "passed": true,
+          "marks_awarded": 1.5,
+          "maximum_marks": 1.5
+        }
+      },
+      "compilation_marks_awarded": 1.5,
+      "maximum_compilation_marks": 1.5,
+      "total_marks_awarded": 5.0,
+      "total_maximum_marks": 5.0
+    },
+    "task_7": {
+      "question_number": 7,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "7.1": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "7.2": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "7.3": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "7.4": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        }
+      },
+      "compilation_marks_awarded": 2,
+      "maximum_compilation_marks": 2,
+      "total_marks_awarded": 8,
+      "total_maximum_marks": 8
+    },
+    "task_8": {
+      "question_number": 8,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "8.1": {
+          "passed": true,
+          "marks_awarded": 0.5,
+          "maximum_marks": 0.5
+        },
+        "8.2": {
+          "passed": true,
+          "marks_awarded": 0.5,
+          "maximum_marks": 0.5
+        },
+        "8.3": {
+          "passed": true,
+          "marks_awarded": 0.5,
+          "maximum_marks": 0.5
+        },
+        "8.4": {
+          "passed": true,
+          "marks_awarded": 0.5,
+          "maximum_marks": 0.5
+        },
+        "8.5": {
+          "passed": true,
+          "marks_awarded": 0.5,
+          "maximum_marks": 0.5
+        },
+        "8.6": {
+          "passed": true,
+          "marks_awarded": 0.5,
+          "maximum_marks": 0.5
+        },
+        "8.7": {
+          "passed": true,
+          "marks_awarded": 3,
+          "maximum_marks": 3
+        },
+        "8.8": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        }
+      },
+      "compilation_marks_awarded": 3,
+      "maximum_compilation_marks": 3,
+      "total_marks_awarded": 10.0,
+      "total_maximum_marks": 10.0
+    },
+    "task_9": {
+      "question_number": 9,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "9.1": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "9.2": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "9.3": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "9.4": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        }
+      },
+      "compilation_marks_awarded": 2,
+      "maximum_compilation_marks": 2,
+      "total_marks_awarded": 8,
+      "total_maximum_marks": 8
+    },
+    "task_10": {
+      "question_number": 10,
+      "compile_error": false,
+      "function_signature_changed": false,
+      "not_implemented": false,
+      "error": null,
+      "subtasks": {
+        "10.1": {
+          "passed": true,
+          "marks_awarded": 1,
+          "maximum_marks": 1
+        },
+        "10.2": {
+          "passed": true,
+          "marks_awarded": 2,
+          "maximum_marks": 2
+        },
+        "10.3": {
+          "passed": true,
+          "marks_awarded": 3,
+          "maximum_marks": 3
+        }
+      },
+      "compilation_marks_awarded": 2,
+      "maximum_compilation_marks": 2,
+      "total_marks_awarded": 8,
+      "total_maximum_marks": 8
+    }
+  }
+}

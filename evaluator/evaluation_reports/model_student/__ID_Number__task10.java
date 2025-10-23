@@ -231,7 +231,7 @@ public class RoomsService {
   }
 
   public List<Room> getAvailableRoomsByHour(Building building, int hour, Integer minCapacity, Boolean projectorRequired, Boolean internetRequired) {
-    if (hour < 1 || hour > 10) return new ArrayList<>();
+if (hour < 1 || hour > 10) return new ArrayList<>();
     
     List<Room> filtered = filterRooms(minCapacity, building, projectorRequired, internetRequired);
     List<Room> available = new ArrayList<>();

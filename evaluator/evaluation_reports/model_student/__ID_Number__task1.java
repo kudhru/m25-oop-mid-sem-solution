@@ -79,10 +79,10 @@ public class RoomsService {
     public void setInternetAvailable(boolean internetAvailable) { this.internetAvailable = internetAvailable; }
 
     public int compareTo(Room other) {
-      if (other == null) return 1;
-      int cap = Integer.compare(this.capacity, other.capacity);
+if (other == null) return 1;
+      int cap = Integer.compare(this.capacity, other.capacity); // first compare capacity
       if (cap != 0) return cap;
-      return this.roomNumber.compareTo(other.roomNumber);
+      return this.roomNumber.compareTo(other.roomNumber); // if capacity is equal, compare room numbers
     }
 
     public boolean equals(Object o) {

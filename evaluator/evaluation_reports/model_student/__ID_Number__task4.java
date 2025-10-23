@@ -134,7 +134,7 @@ public class RoomsService {
   }
 
   public ErrorCode addRoom(Room room) {
-    if (room == null) {
+if (room == null) {
       return ErrorCode.ROOM_NULL;
     }
     Building b = room.getBuilding();
@@ -145,12 +145,14 @@ public class RoomsService {
     if (!isValidCapacity(room.getCapacity())) {
       return ErrorCode.INVALID_CAPACITY;
     }
+    // uniqueness
     for (Room r : rooms) {
       if (r.getBuilding() == b && r.getRoomNumber().equals(rn)) {
         return ErrorCode.DUPLICATE_ROOM;
       }
     }
     rooms.add(room);
+    // init booking map entry
     bookingsByRoomKey.putIfAbsent(getRoomKey(b, rn), new HashSet<>());
     return ErrorCode.OK;
   }

@@ -109,7 +109,7 @@ public class RoomsService {
     public static final class Comparators {
       private Comparators() {}
 
-      public static final java.util.Comparator<Room> BY_BUILDING_THEN_ROOM = (a, b) -> {
+      public static final java.util.Comparator<Room> BY_BUILDING_THEN_ROOM =  (a, b) -> {
         if (a == b) return 0;
         if (a == null) return -1;
         if (b == null) return 1;

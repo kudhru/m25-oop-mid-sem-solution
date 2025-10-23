@@ -221,12 +221,12 @@ public class RoomsService {
   }
 
   public ErrorCode isAvailable(Building building, String roomNumber, int hour) {
-    if (hour < 1 || hour > 10) return ErrorCode.INVALID_HOUR;
+if (hour < 1 || hour > 10) return ErrorCode.INVALID_HOUR;
     Room room = getRoom(building, roomNumber);
     if (room == null) return ErrorCode.ROOM_NOT_FOUND;
     String k = getRoomKey(building, roomNumber);
     Set<Integer> booked = bookingsByRoomKey.get(k);
-    if (booked == null) return ErrorCode.OK;
+    if (booked == null) return ErrorCode.OK; // room exists and no bookings yet
     return booked.contains(hour) ? ErrorCode.ALREADY_BOOKED : ErrorCode.OK;
   }
 
