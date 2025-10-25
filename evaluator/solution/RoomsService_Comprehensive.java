@@ -1,9 +1,9 @@
 /**
  * PLEASE DO NOT FORGET TO FILL IN THE FOLLOWING FIELDS:
- * Name: Mehul Varshney
- * ID Number: 2023A7PS0621P
- * Lab Number: 6016
- * System Number: 23
+ * Name:  
+ * ID Number: 
+ * Lab Number: 
+ * System Number: 
 */
 import java.util.ArrayList;
 import java.util.Collections;
