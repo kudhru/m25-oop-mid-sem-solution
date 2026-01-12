@@ -1,0 +1,38 @@
+Printing Entire Telephone Directory
+----- TELEPHONE DIRECTORY -----
+City: Delhi
+  Rakesh (ID:C002) -> [8765432111]
+  Ram (ID:C001) -> [9123456789, 9123456788]
+City: Mumbai
+  John (ID:C003) -> [7778889990, 9998889991]
+-------------------------------
+Most active: John (ID:C003) -> [7778889990, 9998889991]
+Average calls per contact: 2.6666666666666665
+Most frequent city: Delhi
+Search 'oh': [John (ID:C003) -> [7778889990, 9998889991]]
+Contacts in Delhi: 2
+Calls for Ram: 2
+Calls for Rakesh: 1
+Calls for John: 5
+Removing Rakesh
+Printing Updated Telephone Directory
+----- TELEPHONE DIRECTORY -----
+City: Delhi
+  Ram (ID:C001) -> [9123456789, 9123456788]
+City: Mumbai
+  John (ID:C003) -> [7778889990, 9998889991]
+-------------------------------
+Removing a phone number of john
+Printing Updated Telephone Directory
+----- TELEPHONE DIRECTORY -----
+City: Delhi
+  Ram (ID:C001) -> [9123456789, 9123456788]
+City: Mumbai
+  John (ID:C003) -> [9998889991]
+-------------------------------
+Removing the second phone number of john
+Printing Updated Telephone Directory
+----- TELEPHONE DIRECTORY -----
+City: Delhi
+  Ram (ID:C001) -> [9123456789, 9123456788]
+-------------------------------
